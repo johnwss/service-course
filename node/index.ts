@@ -9,6 +9,7 @@ import {
 import { Clients } from './clients'
 import { analytics } from './handlers/analytics'
 import { updateLiveUsers } from './event/liveUsersUpdate'
+import { productList } from '../node/resolvers/products'
 
 const TREE_SECONDS_MS = 3 * 1000
 const CONCURRENCY = 10
@@ -53,4 +54,12 @@ export default new Service<Clients, State, ParamsContext>({
       GET: [analytics],
     }),
   },
+
+      graphql: {
+            resolvers: {
+                Query: {
+                    productList,
+                },
+        },
+    },
 })

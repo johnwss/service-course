@@ -5,7 +5,7 @@ import { COURSE_ENTITY } from '../utils/constants'
 export async function updateLiveUsers(ctx: EventContext<Clients>) {
     console.log('EVENT HANDLER: received event')
     const liveUsersProducts = await ctx.clients.analytics.getLiveUsers()
-    console.log('LIVE USERSS: ', liveUsersProducts)
+    console.log('LIVE USERS: ', liveUsersProducts)
       await Promise.all(
           liveUsersProducts.map(async ({ slug, liveUsers }) => {
             try {

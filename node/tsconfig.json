@@ -16,6 +16,6 @@
   "typeAcquisition": {
     "enable": false
   },
-  "include": ["./**/*.ts"],
+  "include": ["./**/*.ts", "resolvers/products.ts"],
   "exclude": ["node_modules"]
 }
